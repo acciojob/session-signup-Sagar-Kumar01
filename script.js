@@ -8,15 +8,15 @@ let submit = document.getElementById("submit");
 submit.addEventListener("click",(e)=>{
 	e.preventDefault();
 
-	let pass = password.target.value();
-	let pass2 = confirm_password.target.value();
+	let pass = password.target.value;
+	let pass2 = confirm_password.target.value;
 
 	if(pass == pass2){
 		sessionStorage.setItem("name",name.target.value);
 		sessionStorage.setItem("email",email.target.value);
 		sessionStorage.setItem("password",password.target.value);
-		alert("Sign up successful!")
+		alert("Sign up successful!");
 	}else{
-		alert("Passwords do not match")
+		alert("Passwords do not match");
 	}
 })
